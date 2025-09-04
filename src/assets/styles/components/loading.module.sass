@@ -1,0 +1,25 @@
+@import '../mixins'
+
+.loadingContainer
+    @include flexCenter
+    position: absolute
+    width: 100vw
+    height: 100vh
+    z-index: 5
+    .textContainer
+        @include desfoque
+        @include flexCenter
+        width: 29vw
+        heigth: 100vw
+        span
+            font-size: 5vh
+            letter-spacing:  0.7vw
+            animation: loading 5s alternate infinite
+            transition: 0.3s ease-in-out
+
+@keyframes loading
+    0%
+        transform: scale(0)
+
+    100%
+        transform: scale(1.2)
